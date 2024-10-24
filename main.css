@@ -1310,7 +1310,147 @@ nav ul li:hover .dropdown-menu {
   color: #007bff;
 }
 
+/*재윤 작업*/
+
 iframe {
   height: 100%;
   width: 100%;
 }
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.SP_top_wrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 20px;
+}
+
+.SP_top_wrap a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.SMS_fixed_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.fixed_logo img {
+  max-width: 150px;
+}
+
+.gnb_menu_container {
+  display: flex;
+  justify-content: center;
+}
+
+.gnb_menu_wrap {
+  display: flex;
+  list-style: none;
+}
+
+.gnb_menu_wrap li {
+  margin: 0 20px;
+}
+
+.gnb_menu_wrap a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.gnb_menu_wrap a:hover {
+  color: #000;
+}
+
+.gnb_menu_wrap .submenu ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid .icon_wrap .search_fixed_btn {
+    background-image: url("/path-to-search-icon.png");
+  }
+  list-style: none;
+  padding: 10px;
+  top: 30px;
+  left: 0;
+}
+
+.gnb_menu_wrap .submenu:hover ul {
+  display: block;
+}
+
+.gnb_menu_wrap .submenu ul li {
+  padding: 5px 10px;
+}
+
+.gnb_menu_wrap .submenu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.icon_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.icon_wrap .small_icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.icon_wrap .m_cart {
+  position: relative;
+}
+
+.icon_wrap .m_cart a {
+  display: block;
+  text-decoration: none;
+}
+
+.icon_wrap .count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.icon_wrap .m_menu {
+  background-image: url("/path-to-menu-icon.png");
+}
+
+.menu_2ul {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  z-index: 100;
+}
+
+.product:hover .menu_2ul {
+  display: block;
+}
+
+/*재윤 작업*/
