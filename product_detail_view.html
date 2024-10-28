@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
     <!-- <link rel="stylesheet" href="/Ohora_css/slick.css">
@@ -17,145 +18,6 @@
     <link rel="stylesheet" href="/Ohora_css/smartpc_order.css">
     <link rel="stylesheet" href="/Ohora_css/smartpc_search.css">
     <link rel="stylesheet" href="/Ohora_css/smartpc_subcommon.css"> -->
-<!-- <style>
-* { box-sizing: border-box; }
-
-/* BODY HTML FONT */
-body, html, :lang(ko) { font-family: 'Noto Sans KR', sans-serif;}
-:lang(en), .eng_font, .titleCommon { font-family: 'Libre Baskerville', serif !important; }
-.eventPage h2 { text-transform: lowercase; }
-
-/* HTML BODY SCROLL NOT */
-.SP_overflow_hd { width:100% !important; height:100% !important; overflow:hidden !important;  }
-
-/* FLOAT CLEAR */
-.clearboth:after { content:""; display:block; clear:both; }
-
-/* LAY OUT */
-.SP_layoutFix { width:1200px; margin:0 auto;}
-.SP_layoutMin { min-width:1200px;}
-.SP_layoutMinMax { min-width:1200px; max-width:1480px; margin:0 auto; }
-
-/* SECTION */
-.SP_section { padding-top:80px; }
-.SP_sub_section {}
-
-/* INPUT TYPE CHECKBOX */
-input[type="checkbox"] { 
-    display: inline-block;
-    margin: 1px 0 0 -17px;
-    vertical-align: top;
-    border-color: #000;
-    position: relative;
-    width: 16px;
-    height: 16px;
-    border-radius: inherit;
-    background: none;
-    border: 1px solid #000;
-	cursor: pointer;
-	appearance: none;
-	-webkit-appearance: none;
-    box-sizing: border-box;
-}
-
-input[type="checkbox"]:checked {
-	background: url(/smartpc/_img/icon/input_chked.png) no-repeat center center;
-    background-size: 85%;
-    background-color: #000;
-    border-color: #000;
-}
-
-/* INPUT TYPE TEXT COMMON */
-body input[type="text"] {display:inline-block;vertical-align:middle;height: 40px;padding-left: 20px;font-size: 15px;color: #000;border: 1px solid #ddd;box-sizing:border-box;min-width: 100px;}
-body input[type="password"] {display:inline-block;vertical-align:middle;height: 40px;padding-left: 20px;font-size: 15px;color: #000;border: 1px solid #ddd;box-sizing:border-box;}
-
-/* POPUP COMMON */
-/* Chrome/Opera/Safari */
-#keyword::-webkit-input-placeholder { color:#111;}
-/* Firefox 19+ */
-#keyword::-moz-placeholder { color:#111; }
-/* IE 10+ */
-#keyword:-ms-input-placeholder { color:#111; }
-/* Firefox 18- */
-#keyword:-moz-placeholder { color:#111; }
-
-/* Select */
-select {height: 40px;font-size: 15px;color: #000;border: 1px solid #ddd;box-sizing:border-box;background: #FFF url(/smartpc/_img/icon/icon_select.png) no-repeat 85% center;padding: 5px 0 5px 15px;vertical-align: middle;min-width: 100px;}
-select::-ms-expand { display: none; }
-select { appearance:none;-webkit-appearance: none;-moz-appearance: none; }
-
-/* SLKIDER ARROW */
-.slick-arrow {position:absolute;top:50%;width:29px;height:56px;margin-top: -25px;background-repeat:no-repeat;z-index:1;}
-.slick-arrow.slick-next {right: 13%;}
-.slick-arrow.slick-prev {left: 13%;}
-
-/* SECTION / SUBSETION TITLE */
-.SP_tit_wrap {}
-.section_title {font-size: 32px;color: #000;font-weight: bold;display:  inline-block;margin-bottom: 50px;}
-.section_subtxt {font-size: 20px;color: #000;position: relative;top: -1px;padding-left: 45px;}
-
-/* BUTTON COMMON */
-.SP_cm_btn {display:inline-block;vertical-align:top;width: calc(33.333% - 10px);height:45px;line-height:45px;font-size: 15px;color:#000;background:#fff;text-align:center;box-sizing:border-box;}
-.SP_cm_btn.SP_cm_btn_block { display:block; }
-.SP_cm_btn.SP_btn_gray_bd {border: 1px solid #ddd;}
-.SP_cm_btn.SP_btn_black_bd { border:1px solid #111; }
-.SP_cm_btn.SP_btn_black_bg, .SP_cm_btn.SP_btn_blue_bg {color:#fff;background:#111;}
-.SP_cm_btn.SP_btn_gray_bg { background:#ece8e5; }
-.SP_cm_btn.SP_btn_gray_bg_darkgray_bd { background:#ece8e5; border:1px solid #777777; }
-
-/* BUTTON BACKGROUND COLOR */
-.SP_cm_btn.SP_btn_skyBlue_bg {background:#b8e5fa;border: none;}
-.SP_cm_btn.SP_btn_gray_bg {background: #111;color: #fff;}
-
-/* BUTTON BORDER COLOR */
-.SP_cm_btn.SP_btn_darkGray_bd { border:1px solid #57585a; color:#57585a; }
-.SP_cm_btn.SP_btn_black_w2_bd { border:2px solid #111; }
-
-/* ICON COMMON */
-.SP_cm_icon { display:block; background-repeat:no-repeat; background-size:cover; font-size:1px; color:#fff; text-indent:-9999px; }
-.SP_cm_icon.cm_icon_inline_block { display:inline-block; }
-.SP_cm_icon.cm_icon_vertical_mid { vertical-align:middle; }
-
-/* ICON */
-.SP_cm_icon.SP_topbn_close {width: 16px;height: 16px;background-image: url('/smartpc/_img/icon/icon_close_bl.png');}
-.SP_cm_icon.SP_black_search_icon { width:28px; height:28px; margin:0 auto; background-image:url('/smartpc/_img/icon/ham_search.png'); }
-.SP_cm_icon.SP_allmenu_icon { width:16px; height:15px; background-image:url('/smartpc/_img/icon/icon_menu.png'); }
-.SP_cm_icon.SP_cart_icon {width:14px;height:16px;background-image: url('/smartpc/_img/icon/ham_basket.png');}
-.SP_cm_icon.SP_cartDelbtn_icon { width:12px; height:12px; background-image: url('/smartpc/_img/icon/icon_close_bl.svg'); }
-.SP_cm_icon.SP_search_icon {width:14px;height:16px;background-image: url('/smartpc/_img/icon/ham_search.png');background-size: 100%;}
-
-/* ICON SNS */
-.SP_cm_icon.SP_facebook_icon { width:14px; height:26px; background-image:url('/smartpc/_img/icon/icon_facebook.png'); }
-.SP_cm_icon.SP_instr_icon { width:24px; height:24px; background-image:url('/smartpc/_img/icon/icon_instr.png'); }
-.SP_cm_icon.SP_youtube_icon { width:24px; height:28px; background-image:url('/smartpc/_img/icon/icon_youtube.png'); }
-
-.SP_required { color: #f24443; font-weight:bold; }
-
-/* =======================================================  // COMMON END ======================================================= */
-
-
-/* =======================================================  UTILITY  ======================================================= */
-
-/* ==== 상품 바로구매시 팝업 ==== */
-.SP_hoverPopup { display:none; position:fixed; top:50%; left:50%; width:717px; height:412px; margin-left:-350px; margin-top:-250px; border:1px solid #757575; overflow:hidden; background:#fff; z-index:9999;}
-.SP_hoverPopup .SP_hoverPop_iframe { position:relative; width:100%; height:100%;}
-.SP_hoverPop_iframe iframe { width:100%; height:100%; }
-.SP_detailPageClose_btn { position:absolute; top:13px; left:auto; right:13px; font-size:14px; color:#333; z-index:8;}
-
-
-/* =======================================================  상품 바스켓  ======================================================= */
-.SP_basketAdd_wrap {position:fixed;top:50%;left:50%;width:500px;height:550px;margin-top:-275px;margin-left:-250px;border:1px solid #111;background:#fff;box-sizing:border-box;z-index:999;}
-.SP_basketAdd_inr { font-size:0; }
-.SP_basketAdd_wrap .SP_BskHeader { position:relative; padding:15px 20px; background:#111; }
-.SP_basketAdd_wrap .SP_BskHeader .SP_bskAddClose { position:absolute; top:15px; left:auto; right:15px; cursor:pointer; }
-.SP_basketAdd_wrap .SP_BskHeader h3{ font-size:14px; color:#fff;  }
-
-.SP_basketAdd_cont {height: 440px;padding:20px;overflow:auto;}
-.SP_basketAdd_cont .SP_bskAddThumb { display:inline-block; vertical-align:middle; width:150px; height:150px; overflow:hidden; }
-.SP_basketAdd_cont .SP_bskAddThumb img { max-width:100%; }
-.SP_basketAdd_cont .SP_bskAddOpt { display:inline-block; vertical-align:middle; width:100%}
-
-</style> -->
 
 <style>
 body{
@@ -303,7 +165,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* 그리드 항목 간의 간격 설정 */
-    max-width: 1200px; /* 최대 너비 1200px로 제한 */
+    max-width: 1050px; /* 최대 너비 1200px로 제한 */
     width: 80%; /* 화면 너비 100%를 차지하되, max-width 내에서 제한 */
     margin: 0 auto; /* 가운데 정렬 */
     padding: 20px; /* 내부 여백 */
@@ -373,7 +235,7 @@ body{
 .SP_detailPrdOpt_wrap {
   grid-row: 2/ 1;
   gap: 20px;
-  width: 500px;
+  width: 510px;
   margin: 0 auto; /* 가운데 정렬 */
   padding: 20px;
   align-items: center; /* 세로로 가운데 정렬 */
@@ -504,7 +366,6 @@ input[type="text"] {
   font-size: 16px;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 .SP_buyBtn {
@@ -512,7 +373,7 @@ input[type="text"] {
 }
 
 .SP_cartBtn {
-  background-color: grey;
+  background-color: black;
 }
 
 .SP_dfList_quantity .SP_detail_content a.down {
@@ -560,13 +421,15 @@ input[type="text"] {
     width: 115px;
     height: 115px;
     box-sizing: border-box;
+    border: 1px #bababa solid;
 }
 
 .SP_prdAddSetList_wrap > li .SP_addSetInfo {
     display: flex;
     position: relative;
     align-items: center;
-    margin: 5wpx 0;
+    margin: 5px 0;
+    width: 100%;
 }
 
 .SP_detail_content span{
@@ -584,16 +447,19 @@ input[type="text"] {
     overflow: hidden;
         > img{
             width: 100%;
-            height: 110%;
+            height: 100%;
         }
 }
 
-.share_btn {
-    position: absolute; /* 부모 컨테이너에 상대적인 위치 */
-    top: 10px; /* 위에서 10px 아래로 */
-    right: 10px; /* 오른쪽에서 10px 떨어지도록 설정 */
-    z-index: 1000; /* 다른 요소들 위에 위치할 수 있도록 z-index 설정 */
+.SP_dtPrdOptionList_wrap {
+    position: relative;
+}
 
+.SP_dtPrdOptionList_wrap .share_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
     width: 20px;
     height: 20px;
 }
@@ -675,10 +541,30 @@ input[type="text"] {
     border-bottom: 1px solid #bababa !important;
 }
 
-.SP_prdAddSetList_wrap > li .SP_addSetInfo {
+.SP_prdAddSetList_wrap > li {
     display: flex;
     position: relative;
     align-items: center;
+}
+
+
+
+/* 추가버튼 */
+.SP_addSetInfo .btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.SP_addSetInfo .btn a {
+    display: block;
+    padding: 7px 14px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    background: #000;
+    border: 1px solid #000;
 }
 
 .renew_prdDetail .SP_addSetThumb {
@@ -693,6 +579,113 @@ input[type="text"] {
 .SP_totalProducts{
     display: none;
 }
+
+/* 리뷰쪽 css */
+body.renewed_widget {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+body.renewed_widget {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 720px;
+    margin: 0;
+}
+
+.SP_productAddSet_wrap .SP_prdAddSet_title h3 {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 20px);
+    font-size: 16px;
+    color: #333;
+    font-weight: 900;
+}
+
+.SP_productAddSet_wrap .SP_prdAddSet_title {
+    margin: 18px 8px 13px 0;
+    font-size: 0;
+}
+
+.SP_productAddSet_wrap .SP_prdAddSetToggle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 11px;
+    transform: rotate(180deg);
+    background-image: url(https://ohora.kr/smartpc/_img/icon/addProduct_arrow.svg);
+    background-repeat: no-repeat;
+}
+
+.SP_productAddSet_wrap.view .SP_prdAddSetToggle {
+    transform: rotate(0) !important;
+    transition: .5s;
+}
+
+.renew_prdDetail .SP_productAddSet_wrap .SP_prdAddSetToggle {
+    /* transition: .5s; */
+    height: 30px;
+    background-position: center;
+}
+
+.SP_productAddSet_wrap.open .SP_prdAddSetToggle {
+    transform: rotate(0);
+    transition: .5s;
+}
+
+.SP_productAddSet_wrap:not(.view) .SP_prdAddSetToggle {
+    transform: rotate(180deg) !important;
+}
+
+#NaverChk_Button{
+    display: none;
+}
+
+/* 바로구매 버튼 */
+.renew_prdDetail .SP_totalPrdOrderBtn_wrap .SP_cm_btn.SP_buyBtn {
+    width: 155px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 16px;
+    background: #f3f3f3;
+    border: none;
+}
+
+.SP_cm_btn.SP_btn_black_bg {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* 장바구니 버튼 */
+.renew_prdDetail .SP_totalPrdOrderBtn_wrap .SP_cartBtn {
+    width: 300px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 16px;
+}
+
+/*기본배송*/
+.renew_prdDetail .deliver_con {
+    padding: 20px 0;
+    margin-top: 35px;
+    border-top: 1px solid #c6c6c6;
+}
+
+.renew_prdDetail .deliver_con th {
+    font-size: 14px;
+}
+
+.deliver_con th {
+    width: 105px;
+    text-align: left;
+    padding: 15px 0px;
+    vertical-align: top;
+}
+
+
+
+
 
 
 
@@ -799,7 +792,7 @@ input[type="text"] {
 </div>
 
 <script>
-    // 큰 이미지를 변경하는 함수
+    // 큰 이미지를 변경하는 function
     function changeImage(imageSrc) {
         document.getElementById('mainImage').src = imageSrc;
     }
@@ -843,6 +836,47 @@ input[type="text"] {
   <span class="title" style="">가격</span><span class="SP_detail_content" style=""><span style=""><strong id="span_product_price_text" style="text-decoration: line-through;">14,800</strong><input id="product_price" name="product_price" value="" type="hidden" style=""></span><span class="salesPrice">12,580</span><span class="dcPercent">15%</span></span>
   </li><li class="xans-record- SP_dfList_quantity" style="display: list-item;"><span class="title" style="">수량</span><span class="SP_detail_content"><a href="#none" class="down"></a><input id="quantity_clone" value="1" type="text" readonly=""><a href="#none" class="up"></a></span></li><li class="xans-record- SP_dfList_mileageInfo" style="display: list-item;"><!--<span class="title"><span>적립금</span></span><span class="SP_detail_content"><span class="point">로그인 후 적립금을 확인해보세요.</span></span>--></li>
   <li class="display_할인판매가 xans-record- SP_dfList_salePrice" style="display: list-item;">
+
+    <script>
+        // 주문 수량 기능
+document.querySelector(".down").onclick = function() {
+    var quantityInput = document.getElementById("quantity_clone");
+    var currentValue = parseInt(quantityInput.value);
+
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    } else {
+        alert("최소 주문수량은 1개 입니다");
+    }
+};
+
+document.querySelector(".up").onclick = function() {
+    var quantityInput = document.getElementById("quantity_clone");
+    var currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+};
+
+// jQuery
+// $(document).ready(function() {
+//     $(".down").click(function() {
+//         var $quantityInput = $("#quantity_clone");
+//         var currentValue = parseInt($quantityInput.val());
+
+//         if (currentValue > 1) {
+//             $quantityInput.val(currentValue - 1);
+//         } else {
+//             alert("최소 주문수량은 1개 입니다");
+//         }
+//     });
+
+//     $(".up").click(function() {
+//         var $quantityInput = $("#quantity_clone");
+//         var currentValue = parseInt($quantityInput.val());
+//         $quantityInput.val(currentValue + 1);
+//     });
+// });
+
+    </script>
   <!-- <span class="title" style=""><span style="">할인판매가</span></span><span class="SP_detail_content" style=""><span style=""><span style=""><span id="span_product_price_sale" style="">12,580 </span></span></span></span> -->
   </li>
   <!-- <li class="display_배송비 xans-record- SP_dfList_deliveryInfo" style="display: list-item;">
@@ -1028,7 +1062,24 @@ input[type="text"] {
   </div>
   <script src="/smartpc/include/detailPage/addProduct/st01_addProduct/_js/addProduct.js"></script>
               <!-- // 추가구성상품 -->
-  
+  <script>
+    // 추가 구성상품 토글 function
+document.querySelector(".SP_prdAddSetToggle").onclick = function() {
+    var element = document.querySelector(".SP_prdAddSetList_wrap");
+    if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";  // 보이게 설정
+    } else {
+        element.style.display = "none";   // 숨기기
+    }
+};
+
+// $(".SP_prdAddSetToggle").click(function() {
+//     $(".SP_prdAddSetList_wrap").toggle();
+// });
+
+
+
+  </script>
               <!----------------------------------- 선택 상품 출력 영역 ----------------------------------->
               <div id="totalProducts" class="SP_totalProducts ">
                 <!-- <p class="ec-base-help txtWarn txt11 "> 수량을 선택해주세요.</p><p class="ec-base-help txtWarn txt11 displaynone"> 위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p> -->
@@ -1036,7 +1087,7 @@ input[type="text"] {
   <caption>
                     상품 목록
                   </caption>
-                  <colgroup><col style="width: *"></colgroup>
+                  <colgroup><col style="width: auto"></colgroup>
   <thead><tr>
   <th scope="col">상품명</th>
                       <th scrop="col">수량</th>
@@ -1090,6 +1141,147 @@ input[type="text"] {
               <!--<a href="/product/list.html?cate_no=120"><img src="/web/_event/0427_event8ver3/PC_detail_app6.jpg"/></a>-->
               <!----------------------------------- 액션 버튼 영역 ----------------------------------->
               <div class="action_btn_wrap">
+                <div class="xans-element- xans-product xans-product-action " style="width: 100%;"><div class="SP_totalPrdOrderBtn_wrap" >
+                    <!-- 품절 아이콘 -->
+                    <!-- <span class="btnEm sizeL gFlex2 displaynone">Sold out</span> -->
+                    <!-- //품절 아이콘 -->
+                    <!-- 재입고 알림 신청 -->
+                    <!-- <a href="#none" class="restockBtn displaynone">
+                      <button type="button" class="btnRestockSms" sms_restock_login_display="" onclick="">재입고 알림 신청하기</button>
+                      <button type="button" onclick="logoff_sms_restock();" class="xans-element- xans-layout xans-layout-statelogoff btnRestockSms ">재입고 알림 신청하기
+  </button>
+                    </a> -->
+                    <!-- //재입고 알림 신청 -->
+                    <!-- 바로 구매 버튼 -->
+                    <a href="#none" class="SP_cm_btn SP_btn_black_bg SP_buyBtn ">
+                      <!-- onclick="product_submit(1, '/exec/front/order/basket/', this)" -->
+                      <span id="btnBuy">바로 구매</span>
+                      <!-- <span id="btnReserve" class="displaynone">예약주문</span> -->
+                      <!-- <span id="" class="displaynone">정기배송 신청하기</span> -->
+                    </a>
+                    <!-- //바로 구매 버튼 -->
+                    <!-- 장바구니 버튼 -->
+                    <a href="#none" class="SP_cm_btn SP_cartBtn " onclick="addtoCart();">장바구니 담기</a>
+                    <!-- onclick="product_submit(2, '/exec/front/order/basket/', this)" -->
+                    <!-- //장바구니 버튼 -->
+                  </div>
+  <div id="appPaymentButtonBox" style="margin:20px auto 0; display: inline-flex; flex-wrap: wrap; gap:10px;"><div id="kakao-checkout-button"></div></div></div>
+                <!----------------------------------- //액션 버튼 영역 ----------------------------------->
+  
+                <!-- product 1470, 1471 입고 버튼 -->
+                <!-- <script>
+                  if (window.location.href.match("/1470") || window.location.href.match("no=1470") || window.location.href.match("/1471") || window.location.href.match("no=1471")) {
+                    SP$("#contents > div.SP_prdDtail_wrap.renew_prdDetail > div:nth-child(1) > div > div.SP_detailArea_wrap > div.SP_detailPrdOpt_wrap > div.SP_detailPrdOpt_inr > div.action_btn_wrap > div > div > a.restockBtn > button").text("입고 알림 신청하기");
+                  }
+                </script>
+   -->
+                <!----------------------------- 네이버,카카오 체크아웃 구매 버튼 --------------------------->
+                <!-- <div id="appPaymentButtonBox" style="margin-top:40px;"></div>
+                            <p class="naver_txt"  id="kakao_txt">비로그인 카카오페이 결제 시 카카오페이 구매 포인트 10% 적립!<br/>카카오페이 구매 시 공식몰 이벤트 혜택이 적용되지 않을 수 있습니다.</p>-->
+  
+                <div style="margin-top: 40px" class="xans-element- xans-layout xans-layout-statelogoff naver_Wrap "><div class="npay_chk_btn"></div>
+  <div id="NaverChk_Button"><div id="NC_ID_1730038870968324" class="npay_storebtn_bx npay_type_A_2">	<div id="NPAY_BUTTON_BOX_ID" class="npay_button_box ">		<div class="npay_button">			<div class="npay_text"><span class="npay_blind">NAVER 네이버 ID로 간편구매 네이버페이</span></div>				<table class="npay_btn_list" cellspacing="0" cellpadding="0"><tbody><tr>    <td class="npay_btn_item">        <a id="NPAY_BUY_LINK_IDNC_ID_1730038870968324" href="#" class="npay_btn_link npay_btn_pay btn_green" style="box-sizing:content-box; " title="새창"><span class="npay_blind">네이버페이 구매하기</span></a>    </td>    <td class="npay_btn_item btn_width">        <a id="NPAY_WISH_LINK_IDNC_ID_1730038870968324" href="#" class="npay_btn_link npay_btn_zzim " style="box-sizing:content-box; " title="새창"><span class="npay_blind">찜하기</span></a>    </td></tr></tbody></table>		</div>		<div id="NPAY_EVENT_ID" class="npay_event">			<a id="NPAY_PROMOTION_PREV_IDNC_ID_1730038870968324" href="#" class="npay_more npay_more_prev"><span class="npay_blind">이전</span></a>			<p id="NPAY_PROMOTION_IDNC_ID_1730038870968324" class="npay_event_text"><strong class="event_title">머니결제혜택</strong><a class="event_link" href="https://campaign2.naver.com/moneypay/" target="_blank" title="새창">최대 3%적립 + 소득공제</a></p>			<a id="NPAY_PROMOTION_NEXT_IDNC_ID_1730038870968324" href="#" class="npay_more npay_more_next"><span class="npay_blind">다음</span></a>		</div>	</div></div></div>
+  <!-- @JGO/240611 - Enhanced Ecommerce Tag -->
+  <script>
+                    //Npay Event
+                    window.addEventListener("DOMContentLoaded", function () {
+                      setTimeout(function () {
+                        console.log("네이버페이 준비");
+  
+                        $(".npay_btn_pay").one("click", function () {
+                          console.log("네이버페이 실행");
+  
+                          var jgo_products = [];
+                          var productTotalPrice = 0;
+  
+                          if ($(".ProductOption0").length > 0) {
+                            $(".option_products tr").each(function (index, item) {
+                              var productQuantity = $(this).find("input.quantity_opt").val();
+                              var productOptionTotalPrice = $(this).find("td")[2];
+  
+                              if (productOptionTotalPrice) {
+                                var productOptionTotalPriceInput = $(productOptionTotalPrice).find("input");
+                                if (productOptionTotalPriceInput) {
+                                  productOptionTotalPrice = $(productOptionTotalPriceInput).val();
+                                }
+                              }
+  
+                              if (!isNaN(productOptionTotalPrice)) {
+                                productTotalPrice += parseInt(productOptionTotalPrice);
+                              } else {
+                                productOptionTotalPrice = $(this).find("td")[1];
+                                if (productOptionTotalPrice) {
+                                  var productOptionTotalPriceInput = $(productOptionTotalPrice).find("input");
+                                  if (productOptionTotalPriceInput) {
+                                    productOptionTotalPrice = $(productOptionTotalPriceInput).val();
+                                  }
+                                }
+  
+                                if (!isNaN(productOptionTotalPrice)) {
+                                  productTotalPrice += parseInt(productOptionTotalPrice);
+                                }
+                              }
+  
+                              jgo_products.push({
+                                id: productNo,
+                                name: productName,
+                                category: productCategory, // Product category (string).
+                                price: parseInt(productOptionTotalPrice / productQuantity),
+                                quantity: productQuantity,
+                              });
+                            });
+                          }
+  
+                          if ($(".ProductOption0").length == 0 && $("#quantity").val() > 0) {
+                            productTotalPrice = product_price * $("#quantity").val();
+                            jgo_products.push({
+                              id: productNo,
+                              name: productName,
+                              category: productCategory, // Product category (string).
+                              price: product_price,
+                              quantity: $("#quantity").val(),
+                            });
+                          }
+  
+                          if (jgo_products.length > 0 && productTotalPrice > 0) {
+                            var NaverPayPrice = getCookie("NAVERPAY_PRICE");
+  
+                            if (NaverPayPrice != "" && !isNaN(parseInt(NaverPayPrice)) && parseInt(NaverPayPrice) == productTotalPrice) {
+                              console.log(productTotalPrice + " 으로 금액이 같거나, 중복으로 클릭됨");
+                              return false;
+                            }
+  
+                            if (NaverPayPrice == null || NaverPayPrice == "" || (NaverPayPrice != "" && !isNaN(parseInt(NaverPayPrice)) && parseInt(NaverPayPrice) != productTotalPrice)) {
+                              setCookie("NAVERPAY_PRICE", productTotalPrice, 1);
+                            }
+  
+                            var date = new Date();
+                            var orderId = date.getUTCFullYear();
+                            orderId += parseInt(date.getMonth()) + 1 < 10 ? "0" + (parseInt(date.getMonth()) + 1) : parseInt(date.getMonth()) + 1 + "";
+                            orderId += date.getDate() < 10 ? "0" + date.getDate() : date.getDate() + "";
+                            orderId += "-Npay-";
+                            orderId += Math.round(Math.random() * 8888888 + 1111111);
+  
+                            dataLayers.push({
+                              event: "nPayClick",
+                              ecommerce: {
+                                purchase: {
+                                  actionField: {
+                                    id: orderId,
+                                    revenue: productTotalPrice,
+                                  },
+                                  products: jgo_products,
+                                },
+                              },
+                            });
+                          }
+                        });
+                      }, 1000);
+                    });
+                  </script>
+  </div>
+                <!----------------------------- //네이버,카카오 체크아웃 구매 버튼 --------------------------->
+              </div>
                 
                 <!----------------------------------- //액션 버튼 영역 ----------------------------------->
   
